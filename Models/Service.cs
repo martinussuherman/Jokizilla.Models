@@ -11,6 +11,7 @@ namespace Jokizilla.Models.Models
         {
             OrderAdditionalServices = new HashSet<OrderAdditionalService>();
             Orders = new HashSet<Order>();
+            ServiceTagAdditionalServices = new HashSet<ServiceTagAdditionalService>();
         }
 
         public ushort Id { get; set; }
@@ -26,5 +27,6 @@ namespace Jokizilla.Models.Models
         public virtual PriceType PriceType { get; set; }
         public virtual ICollection<OrderAdditionalService> OrderAdditionalServices { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<ServiceTagAdditionalService> ServiceTagAdditionalServices { get; set; }
     }
 }
