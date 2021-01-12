@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Jokizilla.Models.ViewModels
 {
@@ -14,5 +15,6 @@ namespace Jokizilla.Models.ViewModels
         public bool Inactive { get; set; }
         public DateTime UpdatedAt { get; set; }
         public ushort MinimumOrderQuantity { get; set; }
+        public List<AdditionalServiceViewDto> AdditionalServices { get; set; }
     }
 }
