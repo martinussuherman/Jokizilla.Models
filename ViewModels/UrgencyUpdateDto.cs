@@ -1,6 +1,6 @@
 namespace Jokizilla.Models.ViewModels
 {
-    public partial class UrgencyUpdateDto
+    public class UrgencyUpdateDto
     {
         public string Type { get; set; }
         public ushort Value { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace Jokizilla.Models.ViewModels
 {
-    public partial class AdditionalServiceUpdateDto
+    public class AdditionalServiceUpdateDto
     {
         public string Type { get; set; }
         public string Name { get; set; }

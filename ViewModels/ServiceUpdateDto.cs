@@ -1,6 +1,8 @@
+using System.Collections.Generic;
+
 namespace Jokizilla.Models.ViewModels
 {
-    public partial class ServiceUpdateDto
+    public class ServiceUpdateDto
     {
         public string Name { get; set; }
         public byte PriceTypeId { get; set; }
@@ -9,5 +11,6 @@ namespace Jokizilla.Models.ViewModels
         public decimal DoubleSpacingPrice { get; set; }
         public bool Inactive { get; set; }
         public ushort MinimumOrderQuantity { get; set; }
+        public List<ChildEntity<ushort>> AdditionalServices { get; set; }
     }
 }

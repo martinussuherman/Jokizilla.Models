@@ -2,7 +2,7 @@
 
 namespace Jokizilla.Models.ViewModels
 {
-    public partial class AdditionalServiceViewDto
+    public class AdditionalServiceViewDto
     {
         public ushort Id { get; set; }
         public string Type { get; set; }

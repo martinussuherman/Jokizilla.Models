@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Jokizilla.Models.ViewModels
 {
-    public partial class ServiceViewDto
+    public class ServiceViewDto
     {
         public ushort Id { get; set; }
         public string Name { get; set; }

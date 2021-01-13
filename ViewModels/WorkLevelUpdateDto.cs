@@ -1,6 +1,6 @@
 namespace Jokizilla.Models.ViewModels
 {
-    public partial class WorkLevelUpdateDto
+    public class WorkLevelUpdateDto
     {
         public string Name { get; set; }
         public double PercentageToAdd { get; set; }

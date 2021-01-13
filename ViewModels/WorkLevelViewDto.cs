@@ -2,7 +2,7 @@ using System;
 
 namespace Jokizilla.Models.ViewModels
 {
-    public partial class WorkLevelViewDto
+    public class WorkLevelViewDto
     {
         public byte Id { get; set; }
         public string Name { get; set; }

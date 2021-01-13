@@ -2,7 +2,7 @@ using System;
 
 namespace Jokizilla.Models.ViewModels
 {
-    public partial class UrgencyViewDto
+    public class UrgencyViewDto
     {
         public byte Id { get; set; }
         public string Type { get; set; }
