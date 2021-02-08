@@ -884,34 +884,34 @@ namespace Jokizilla.Models.Models
 
             modelBuilder.Entity<ServiceTagAdditionalService>(entity =>
             {
+                entity.HasKey(e => new { e.ServiceId, e.AdditionalServiceId })
+                    .HasName("PRIMARY")
+                    .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+
                 entity.ToTable("service_tag_additional_services");
 
                 entity.HasIndex(e => e.AdditionalServiceId, "FK_service_tag_additional_services_additional_services");
 
                 entity.HasIndex(e => e.ServiceId, "FK_service_tag_additional_services_services");
 
-                entity.HasIndex(e => new { e.ServiceId, e.AdditionalServiceId }, "service_additional_service");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("int(10) unsigned")
-                    .HasColumnName("id");
+                entity.Property(e => e.ServiceId)
+                    .HasColumnType("smallint(5) unsigned")
+                    .HasColumnName("service_id");
 
                 entity.Property(e => e.AdditionalServiceId)
                     .HasColumnType("smallint(5) unsigned")
                     .HasColumnName("additional_service_id");
 
-                entity.Property(e => e.ServiceId)
-                    .HasColumnType("smallint(5) unsigned")
-                    .HasColumnName("service_id");
-
                 entity.HasOne(d => d.AdditionalService)
                     .WithMany(p => p.ServiceTagAdditionalServices)
                     .HasForeignKey(d => d.AdditionalServiceId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_service_tag_additional_services_additional_services");
 
                 entity.HasOne(d => d.Service)
                     .WithMany(p => p.ServiceTagAdditionalServices)
                     .HasForeignKey(d => d.ServiceId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_service_tag_additional_services_services");
             });
 

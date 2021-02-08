@@ -7,9 +7,8 @@ namespace Jokizilla.Models.Models
 {
     public partial class ServiceTagAdditionalService
     {
-        public uint Id { get; set; }
-        public ushort? ServiceId { get; set; }
-        public ushort? AdditionalServiceId { get; set; }
+        public ushort ServiceId { get; set; }
+        public ushort AdditionalServiceId { get; set; }
 
         public virtual AdditionalService AdditionalService { get; set; }
         public virtual Service Service { get; set; }
